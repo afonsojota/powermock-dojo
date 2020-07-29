@@ -19,9 +19,6 @@ import static org.powermock.api.mockito.PowerMockito.whenNew;
 @PrepareForTest(SystemNinjaToTest.class)
 public class PowermockConstructor {
 
-    @Mock
-    Dependency dependency;
-
     @InjectMocks
     SystemNinjaToTest systemNinjaToTest;
 
