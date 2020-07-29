@@ -30,16 +30,11 @@ public class PowermockStatic {
 
     @Test
     public void should_mock_static(){
-
         given(dependency.retrieveAllStats()).willReturn(Arrays.asList(1, 2, 3));
 
         mockStatic(UtilityClass.class);
 
-        int valueToResult = 150;
-
-        when(UtilityClass.staticMethod(Mockito.anyLong())).thenReturn(valueToResult);
-
-        int result = systemNinjaToTest.methodCallingAStaticMethod();
+        systemNinjaToTest.methodCallingAStaticMethod();
 
         verifyStatic(Mockito.times(1));
         UtilityClass.staticMethod(6);
